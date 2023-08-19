@@ -109,12 +109,24 @@ img {
     text-decoration: none;
     padding: 24px 0 24px 0;
     display: block;
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon {
+    padding: 24px 100px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--lightslate, #8E8F99);
+    background: var(--cloud, #F4F4FD);
 }
 
 .address {
     font-style: normal;
     margin-left: auto;
     padding: 24px 0;
+    transition: color;
 }
 
 .titleaddr {
@@ -135,12 +147,24 @@ img {
 
 address a:hover,
 address a:focus {
+
     color: var(--ocean, #404BBF);
 }
 
 nav a:hover,
 nav a:focus {
     color: var(--ocean, #404BBF);
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    display: block;
+    content: "";
+    width: auto;
+    height: 4px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background-color: var(--ocean, #404BBF);
 }
 
 .button {
@@ -174,7 +198,10 @@ button:focus {
     padding: 188px 0 188px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.7)), url(/images/background/people-office\ 1.jpg);
     background-repeat: no-repeat;
-    background-size: 1440px 600px;
+    /*background-size: 1440px 600px;*/
+    max-width: 1440;
+
+    margin: 0 auto;
     background-position: center;
 }
 
@@ -228,35 +255,6 @@ button:focus {
     margin-bottom: 72px;
 }
 
-.paragraf {
-    color: var(--navyblue, #2E2F42);
-    /* Header 3 */
-    font-family: Roboto;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.2;
-    /* 120% */
-    letter-spacing: 0.4px;
-    margin: 0 0 8px 0;
-
-}
-
-.deskr {
-    color: var(--slate, #434455);
-
-    /* Body */
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    /* 150% */
-    letter-spacing: 0.32px;
-    padding: 0;
-    margin: 0;
-}
-
 .section-dascr-list {
     display: flex;
     gap: 24px;
@@ -287,6 +285,36 @@ button:focus {
     background: var(--white, #FFF);
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+}
+
+.paragraf {
+    color: var(--navyblue, #2E2F42);
+    /* Header 3 */
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    /* 120% */
+    letter-spacing: 0.4px;
+    margin: 0 0 8px 0;
+
+}
+
+.deskr {
+    color: var(--slate, #434455);
+
+    /* Body */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.02em;
+    padding: 0;
+    margin: 0;
+    width: 264px;
 }
 
 .container-portfolio-descr {
@@ -392,4 +420,13 @@ button:focus {
     letter-spacing: 0.32px;
     max-width: 264px;
 
+}
+
+.team-social-icon {
+    display: flex;
+}
+
+.social-icon-type {
+    width: 16px;
+    height: 16px;
 }
