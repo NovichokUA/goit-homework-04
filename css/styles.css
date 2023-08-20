@@ -483,12 +483,15 @@ button:focus {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: var(--iris, #4D5AE5);
     border-radius: 50%;
+    background-color: var(--iris, #4D5AE5);
+    transition-property: backround-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-social:hover,
-.link-social:focus {
+.social-icon:hover,
+.social-icon:focus {
     background-color: var(--ocean, #404BBF);
     border-radius: 50%;
 }
