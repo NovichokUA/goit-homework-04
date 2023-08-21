@@ -130,6 +130,16 @@ img {
     background-color: var(--cloud, #F4F4FD);
 }
 
+svg {
+    width: 64px;
+    height: 64px;
+}
+
+.icon-clock {
+    width: 64px;
+    height: 64px;
+}
+
 .address {
     font-style: normal;
     margin-left: auto;
