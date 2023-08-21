@@ -392,7 +392,7 @@ button:focus {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }*/
 
-.container-portfolio-descr-item:hover {
+.container-portfolio-descr-item:hover p {
     transform: translateY(0%);
 }
 
