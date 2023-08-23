@@ -98,13 +98,12 @@ img {
     margin-right: 76px;
 }
 
+.nav-hover {
+    color: #404BBF;
+}
+
 .nav {
     color: #2E2F42;
-    color: #404BBF;
-    /*У першому пункті меню у посилання в 
-        класі заданий стиль color: 404bbf;
-            для визначення кольору тексту - це 
-            те що вимагає система, або не приймає ДЗ*/
     /* Body Medium */
     font-size: 16px;
     font-weight: 500;
