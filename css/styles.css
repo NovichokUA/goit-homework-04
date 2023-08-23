@@ -99,6 +99,11 @@ img {
 }
 
 .nav {
+    color: #404BBF;
+    /*У першому пункті меню у посилання в 
+    класі заданий стиль color: 404bbf;
+        для визначення кольору тексту - це 
+        те що вимагає система, або не приймає ДЗ*/
     color: #2E2F42;
     /* Body Medium */
     font-size: 16px;
@@ -123,7 +128,12 @@ img {
     width: 100%;
     height: 4px;
     border-radius: 2px;
-    /*background-color: #404BBF;*/
+    background-color: #404BBF;
+    /*До класу з псевдоелементом: :after 
+    додана властивість background-color: 404bbf;
+        для визначення кольору фону елемента 
+        це те що вимагає система,
+            або не приймає ДЗ*/
     transition: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
