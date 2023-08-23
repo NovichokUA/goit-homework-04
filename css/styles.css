@@ -129,6 +129,11 @@ img {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
+    /*До класу з псевдоелементом: :after
+    додана властивість background-color: #404bbf;
+        для визначення кольору фону елемента - 
+        це те що вимагає система,
+            або не приймає ДЗ*/
     transition: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
