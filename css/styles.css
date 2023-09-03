@@ -11,6 +11,7 @@ body {
     background-color: var(--white);
     font-family: "Roboto", sans-serif;
     color: var(--slate);
+    position: relative;
 }
 
 ul,
@@ -49,13 +50,6 @@ img {
 .header-property {
     display: flex;
 }
-
-/*.container-hero {
-    display: flex;
-    flex-direction: column;
-    padding: 188px 0;
-    margin: 0 auto;
-}*/
 
 .contnav {
     display: flex;
@@ -129,11 +123,6 @@ img {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
-    /*До класу з псевдоелементом: :after
-    додана властивість background-color: #404bbf;
-        для визначення кольору фону елемента - 
-        це те що вимагає система,
-            або не приймає ДЗ*/
     transition: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -595,4 +584,289 @@ button:focus {
     align-items: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     ;
+}
+
+.container-footer-form {
+    padding-left: 80px;
+}
+
+.container-footer-btn {
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+}
+
+.footer-button-send {
+    color: var(--WHITE, #FFF);
+    text-align: center;
+
+    /* Button Text */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.04em;
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 4px;
+    background: var(--IRIS, #4D5AE5);
+    fill: var(--WHITE, #FFF);
+}
+
+.title-footer-form {
+    color: var(--WHITE, #FFF);
+    padding-bottom: 16px;
+    /* Body Medium */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.02em;
+}
+
+.title-footer-input {
+    width: 264px;
+    height: 40px;
+    background: var(--NAVY-BLUE, #2E2F42);
+    border-radius: 4px;
+    border: 1px solid var(--WHITE, #FFF);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+input::placeholder .title-footer-input {
+    color: var(--WHITE, #FFF);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 200% */
+    letter-spacing: 0.48px;
+}
+
+/* модальне вікно */
+
+/* --------------- */
+
+.container-modal {
+    border-radius: 4px;
+    background: var(--DAIRY, #FCFCFC);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    height: 584px;
+    padding: 24px 24px 24px 24px;
+}
+
+.backdrop {
+    opacity: 1;
+    background: var(--NAVY-BLUE, #2E2F42);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+}
+
+.container-name {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.modal-close-elips {
+    fill: var(--CORNFLOWER, #E7E9FC);
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.10);
+}
+
+.container-close-btn {
+    position: relative;
+    width: 24px;
+    border-radius: 50%;
+}
+
+.icon-close {
+    position: absolute;
+}
+
+.modal-close-btn {}
+
+.icon-person {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+}
+
+.description-input-user {
+    text-indent: 38px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+.user-name {
+    color: #8E8F99;
+
+    /* Small Text */
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.16;
+    /* 116.667% */
+    letter-spacing: 0.04em;
+
+}
+
+.title-form {
+    color: #2E2F42;
+    text-align: center;
+
+    /* Body Medium */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.02em;
+    padding-bottom: 16px;
+
+}
+
+input:focus-within {
+    border: 1px solid #4D5AE5;
+}
+
+input:focus+svg {
+    fill: #4D5AE5;
+}
+
+/* .container-name:focus-within .icon-person {
+    fill: #4D5AE5;
+} */
+
+.textarea {
+    height: 120px;
+    resize: none;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+}
+
+.textarea::placeholder {
+    color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+
+    /* Small Text */
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    /* 116.667% */
+    letter-spacing: 0.48px;
+}
+
+.container-checkbox {
+    padding-top: 16px;
+}
+
+.container-agree {
+    color: var(--LIGHT-SLATE, #8E8F99);
+
+    /* Small Text */
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    /* 116.667% */
+    letter-spacing: 0.48px;
+    display: flex;
+    align-items: center;
+
+}
+
+.change-text {
+    color: var(--IRIS, #4D5AE5);
+
+    /* Link Text */
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.48px;
+    text-decoration-line: underline;
+}
+
+.modal-btn {
+    display: block;
+    padding: 16px 32px;
+    color: var(--WHITE, #FFF);
+    text-align: center;
+
+    /* Button Text */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.64px;
+    border-radius: 4px;
+    background: var(--IRIS, #4D5AE5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+    width: 169px;
+}
+
+.checkbox-replace-container {
+    position: relative;
+    margin-right: 8px;
+}
+
+.checkbox-replace {
+
+    fill: var(--cloud, #F4F4FD);
+    stroke-width: 1px;
+    stroke: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+}
+
+.checkbox-castom {
+    position: absolute;
+    fill: var(--cloud, #F4F4FD);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-replace-container:hover .checkbox-replace {
+    fill: var(--OCEAN, #404BBF);
+    stroke-width: 1px;
+    stroke: var(--OCEAN, #404BBF);
 }
